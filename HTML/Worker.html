@@ -5,26 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Worker</title>
+    <link rel="stylesheet" href="../CSS/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <header>
-      <div>Logo</div>
+  <body class="w-screen h-screen flex flex-col justify-between">
+    <header
+      class="bg-Green1 w-full h-1/5 flex flex-row justify-center items-end p-4 gap-4"
+    >
+      <img
+        src="../Resources/LogoMain.png"
+        alt="Main Logo"
+        class="h-full w-auto"
+      />
     </header>
-    <div>
-      <div>You Are An Operator</div>
-      <div>
-        <div>Enter Your Hourly Target</div>
-        <input type="text" name="" id="" />
-        <input type="button" value="Done" />
+    <div class="h-3/5 flex flex-col justify-evenly items-center">
+      <div class="font-semibold text-2xl">You Are An Operator</div>
+      <div class="flex flex-col gap-4 bg-Gray1 p-4 rounded-lg items-center">
+        <div class="font-medium text-2xl">Enter Your Hourly Target</div>
+        <input
+          type="number"
+          name="Rate"
+          id="Rate"
+          class="w-20 h-20 text-center rounded-lg bg-Green1"
+        />
+        <input
+          type="button"
+          value="Done"
+          class="p-2 bg-Green2 rounded-lg text-white hover:border hover:bg-Green1"
+        />
       </div>
-      <div>
-        <img src="" alt="" />
-        <img src="" alt="" />
+      <div class="flex flex-row h-1/6 w-1/2 justify-between">
+        <img src="../Resources/Machine.png" alt="Machine" />
+        <img src="../Resources/Machine.png" alt="Machine" />
       </div>
     </div>
-    <footer>
-      <div>ICON</div>
-      <div>
+    <footer class="w-full h-1/5 bg-Green2 flex flex-row justify-center gap-2">
+      <img src="../Resources/Logo2.png" alt="ICON" class="m-2" />
+      <div class="flex flex-col justify-around items-center font-semibold">
         <div>Excelence Through Care...</div>
       </div>
     </footer>

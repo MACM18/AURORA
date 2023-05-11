@@ -10,9 +10,9 @@
   </head>
   <body class="w-screen h-screen flex flex-col justify-between">
     <header
-      class="bg-Green1 w-full h-1/5 flex flex-row justify-center items-baseline p-4 gap-4"
+      class="bg-Green1 w-full h-1/5 flex flex-row justify-center items-end p-4 gap-4"
     >
-      <img src="Resources/LogoMain.png" alt="Main Logo" />
+      <img src="Resources/LogoMain.png" alt="Main Logo" class="h-full w-auto" />
       <nav
         class="w-fit h-2/3 flex flex-row justify-center items-end gap-4 underline font-bold"
       >
@@ -28,45 +28,57 @@
         >
       </nav>
     </header>
-    <div class="h-3/5 w-full flex flex-col justify-around items-center">
-      <div class="flex flex-row justify-center gap-2">
-        <div
-          class="w-fit p-4 rounded-lg bg-Gray1 flex flex-col justify-between items-center gap-4"
-        >
-          <div>ICON</div>
-          <div class="font-serif">LOG IN</div>
-          <input
-            type="text"
-            name="userName"
-            id="userName"
-            class="p-2 bg-Green1 rounded-lg align-middle focus:border focus:border-Green2"
-            placeholder="👤 User - Name"
-            minlength="4"
-            required
-          />
-          <input
-            type="password"
-            name="password"
-            id="password"
-            class="p-2 bg-Green1 rounded-lg align-middle"
-            placeholder="🔒 Password"
-            minlength="8"
-            required
-          />
-          <input
-            type="submit"
-            value="LogIn"
-            class="p-2 bg-Green2 rounded-lg text-white hover:border hover:bg-Green1"
-          />
-        </div>
-        <div>Image</div>
+    <div class="h-3/5 p-6 w-full flex flex-col justify-around items-center">
+      <div class="w-full h-full flex flex-row justify-center gap-2">
+        <form action="">
+          <div
+            class="w-fit p-4 rounded-lg bg-Gray1 flex flex-col justify-between items-center gap-4"
+          >
+            <img src="Resources/Logo2.png" alt="Logo 2" class="w-10 h-auto" />
+            <div class="font-serif">LOG IN</div>
+
+            <input
+              type="text"
+              name="userName"
+              id="userName"
+              class="p-2 bg-Green1 rounded-lg align-middle focus:border focus:border-Green2"
+              placeholder="👤 User - Name"
+              minlength="4"
+              required
+            />
+            <input
+              type="password"
+              name="password"
+              id="password"
+              class="p-2 bg-Green1 rounded-lg align-middle"
+              placeholder="🔒 Password"
+              minlength="8"
+              required
+            />
+            <input
+              type="submit"
+              value="LogIn"
+              class="p-2 bg-Green2 rounded-lg text-white hover:border hover:bg-Green1"
+            />
+          </div>
+        </form>
+        <img
+          src="Resources/Woman.png"
+          alt="Sawing woman"
+          class="h-full w-auto"
+        />
       </div>
       <div class="text-lg font-semibold">Excellence Thorugh Care...</div>
     </div>
     <footer class="w-full h-1/5 bg-Green2 flex flex-row justify-center gap-2">
-      <img src="" alt="ICON" />
+      <img src="Resources/Logo2.png" alt="ICON" class="m-2" />
       <div class="flex flex-col justify-around items-center">
-        <div class="flex flex-row gap-2 text-black">Social Links</div>
+        <div class="flex flex-row gap-2 text-black">
+          <img src="Resources/Vector.png" alt="Facebook" class="w-10 h-10" />
+          <img src="Resources/Vector-1.png" alt="WhatsApp" class="w-10 h-10" />
+          <img src="Resources/Vector-2.png" alt="Instagram" class="w-10 h-10" />
+          <img src="Resources/Vector-3.png" alt="Twitter" class="w-10 h-10" />
+        </div>
         <div>Copyright © 2023 AURORA</div>
       </div>
     </footer>
