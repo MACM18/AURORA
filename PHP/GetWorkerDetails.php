@@ -1,10 +1,9 @@
 <?php
 session_start();
 require 'Conn.php';
-$userName = $_POST['userName'];
 $date = $_POST['Date'];
 $response = [];
-$query = "SELECT * FROM operator WHERE User='$userName' AND Date='$date'";
+$query = "SELECT * FROM operator WHERE Date='$date' AND Status not in('Completed','completed','Complete','complete')";
 $result = mysqli_query($con, $query);
 while ($data = mysqli_fetch_array($result)) {
     $response[] = $data;

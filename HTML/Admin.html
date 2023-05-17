@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Worker</title>
     <link rel="stylesheet" href="../CSS/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../JavaScript/Check.js"></script>
+    <script src="../JavaScript/LogOut.js"></script>
   </head>
   <body class="w-screen h-screen flex flex-col justify-between">
     <header
@@ -16,17 +19,27 @@
         alt="Main Logo"
         class="h-full w-auto"
       />
+      <nav
+        class="w-fit h-2/3 flex flex-row justify-center items-end gap-4 underline font-bold"
+      >
+        <div
+          class="hover:border hover:border-Green2 hover:bg-white rounded-lg p-2 cursor-pointer"
+          onclick="LogOut()"
+        >
+          Log Out!
+        </div>
+      </nav>
     </header>
     <div class="h-3/5 flex flex-col justify-evenly items-center">
       <div class="font-semibold text-2xl">You Are An Administrator</div>
       <div class="flex flex-row">
         <div class="flex flex-col gap-10 bg-Green1 p-4 rounded-lg items-center">
-          <div>Today Target</div>
+          <div class="p-2 bg-Gray1 rounded-lg">Today Target</div>
           <div>Graph</div>
           <div>Legends</div>
         </div>
         <div class="flex flex-col gap-10 bg-Green3 p-4 rounded-lg items-center">
-          <div>Status of Order</div>
+          <div class="p-2 bg-Gray1 rounded-lg">Status of Order</div>
           <div>Graph</div>
           <div>Legends</div>
         </div>

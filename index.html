@@ -7,6 +7,7 @@
     <title>AURORA</title>
     <link rel="stylesheet" href="./CSS/style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./JavaScript/Login.js"></script>
   </head>
   <body class="w-screen h-screen flex flex-col justify-between">
     <header
@@ -30,38 +31,35 @@
     </header>
     <div class="h-3/5 p-6 w-full flex flex-col justify-around items-center">
       <div class="w-full h-full flex flex-row justify-center gap-2">
-        <form action="">
-          <div
-            class="w-fit p-4 rounded-lg bg-Gray1 flex flex-col justify-between items-center gap-4"
-          >
-            <img src="Resources/Logo2.png" alt="Logo 2" class="w-10 h-auto" />
-            <div class="font-serif">LOG IN</div>
+        <div
+          class="w-fit p-4 rounded-lg bg-Gray1 flex flex-col justify-between items-center gap-4"
+        >
+          <img src="Resources/Logo2.png" alt="Logo 2" class="w-10 h-auto" />
+          <div class="font-serif">LOG IN</div>
 
-            <input
-              type="text"
-              name="userName"
-              id="userName"
-              class="p-2 bg-Green1 rounded-lg align-middle focus:border focus:border-Green2"
-              placeholder="👤 User - Name"
-              minlength="4"
-              required
-            />
-            <input
-              type="password"
-              name="password"
-              id="password"
-              class="p-2 bg-Green1 rounded-lg align-middle"
-              placeholder="🔒 Password"
-              minlength="8"
-              required
-            />
-            <input
-              type="submit"
-              value="LogIn"
-              class="p-2 bg-Green2 rounded-lg text-white hover:border hover:bg-Green1"
-            />
-          </div>
-        </form>
+          <input
+            type="text"
+            name="userName"
+            id="userName"
+            class="p-2 bg-Green1 rounded-lg align-middle focus:border focus:border-Green2"
+            placeholder="👤 User - Name"
+          />
+          <input
+            type="password"
+            name="password"
+            id="password"
+            class="p-2 bg-Green1 rounded-lg align-middle"
+            placeholder="🔒 Password"
+          />
+          <input
+            type="button"
+            value="LogIn"
+            class="p-2 bg-Green2 rounded-lg text-white hover:border hover:bg-Green1"
+            onclick="LogIn()"
+            onkeypress=""
+          />
+        </div>
+
         <img
           src="Resources/Woman.png"
           alt="Sawing woman"

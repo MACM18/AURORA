@@ -7,6 +7,9 @@
     <title>Worker</title>
     <link rel="stylesheet" href="../CSS/style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../JavaScript/Check.js"></script>
+    <script src="../JavaScript/LogOut.js"></script>
+    <script src="../JavaScript/Checker.js"></script>
   </head>
   <body class="w-screen h-screen flex flex-col justify-between">
     <header
@@ -17,33 +20,52 @@
         alt="Main Logo"
         class="h-full w-auto"
       />
+      <nav
+        class="w-fit h-2/3 flex flex-row justify-center items-end gap-4 underline font-bold"
+      >
+        <div
+          class="hover:border hover:border-Green2 hover:bg-white rounded-lg p-2 cursor-pointer"
+          onclick="LogOut()"
+        >
+          Log Out!
+        </div>
+      </nav>
     </header>
     <div class="h-3/5 flex flex-col justify-evenly items-center">
       <div class="font-semibold text-2xl">You Are A Checker</div>
-      <div class="flex flex-col gap-10 bg-Gray1 p-4 rounded-lg items-center">
-        <div class="flex flex-row self-start gap-2">
-          <div>Enter Your Hourly Good Pieces</div>
+      <div class="flex flex-row justify-center gap-4 items-start">
+        <div id="Selection"></div>
+        <div
+          class="flex flex-col gap-10 bg-Gray1 p-4 rounded-lg items-center hidden"
+          id="Main"
+        >
+          <div class="flex flex-row self-start gap-2">
+            <div>Enter Your Hourly Good Pieces</div>
+            <input
+              type="number"
+              name="Good"
+              id="Good"
+              class="bg-Green1 rounded-lg w-10 text-center"
+            />
+          </div>
+          <div class="flex flex-row self-start gap-2">
+            <div>Enter Your Hourly Damage Pieces</div>
+            <input
+              type="number"
+              name="Damage"
+              id="Damage"
+              class="bg-Green1 rounded-lg w-10 text-center"
+            />
+          </div>
           <input
-            type="number"
-            name="Good"
-            id="Good"
-            class="bg-Green1 rounded-lg w-10 text-center"
+            type="submit"
+            value="Done"
+            class="p-2 bg-Green2 rounded-lg text-white hover:border hover:bg-Green1"
+            onclick="Submit()"
           />
         </div>
-        <div class="flex flex-row self-start gap-2">
-          <div>Enter Your Hourly Damage Pieces</div>
-          <input
-            type="number"
-            name="Damage"
-            id="Damage"
-            class="bg-Green1 rounded-lg w-10 text-center"
-          />
-        </div>
-        <input
-          type="submit"
-          value="Done"
-          class="p-2 bg-Green2 rounded-lg text-white hover:border hover:bg-Green1"
-        />
+        <button id="showDataBtn" onclick="showData()">Show Data</button>
+        <div id="Data" class="hidden overflow-y-scroll"></div>
       </div>
       <div class="flex flex-row h-1/6 w-1/2 justify-between">
         <img
@@ -53,6 +75,10 @@
         />
         <img src="../Resources/SearchR.png" alt="Search Symbol" />
       </div>
+      <div
+        id="Notification"
+        class="hidden absolute top-4 right-4 backdrop-blur-lg p-2 w-fit h-fit border-2 text-lg rounded-lg"
+      ></div>
     </div>
     <footer class="w-full h-1/5 bg-Green2 flex flex-row justify-center gap-2">
       <img src="../Resources/Logo2.png" alt="ICON" class="m-2" />
