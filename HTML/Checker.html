@@ -11,7 +11,7 @@
     <script src="../JavaScript/LogOut.js"></script>
     <script src="../JavaScript/Checker.js"></script>
   </head>
-  <body class="w-screen h-screen flex flex-col justify-between">
+  <body class="w-screen h-fit flex flex-col justify-between">
     <header
       class="bg-Green1 w-full h-1/5 flex flex-row justify-center items-end p-4 gap-4"
     >
@@ -31,12 +31,14 @@
         </div>
       </nav>
     </header>
-    <div class="h-3/5 flex flex-col justify-evenly items-center">
-      <div class="font-semibold text-2xl">You Are A Checker</div>
-      <div class="flex flex-row justify-center gap-4 items-start">
-        <div id="Selection"></div>
+    <div class="h-3/5 w-full flex flex-col justify-evenly items-center">
+      <div class="font-semibold text-2xl" id="Title">You Are A Checker</div>
+      <div
+        class="w-full min-h-max flex flex-col justify-evenly items-center gap-2"
+      >
+        <div id="Selection" class="bg-Gray1 p-4 rounded-lg min-h-fit"></div>
         <div
-          class="flex flex-col gap-10 bg-Gray1 p-4 rounded-lg items-center hidden"
+          class="flex min-h-fit flex-col gap-10 bg-Gray1 p-4 rounded-lg items-center hidden"
           id="Main"
         >
           <div class="flex flex-row self-start gap-2">
@@ -57,23 +59,38 @@
               class="bg-Green1 rounded-lg w-10 text-center"
             />
           </div>
+          <div class="flex flex-row self-start gap-2">
+            <div>Assign to an Order</div>
+            <select id="OrdersList"></select>
+          </div>
           <input
             type="submit"
             value="Done"
-            class="p-2 bg-Green2 rounded-lg text-white hover:border hover:bg-Green1"
+            class="p-2 bg-Green2 rounded-lg text-white hover:border hover:bg-Green1 hover:text-black"
             onclick="Submit()"
           />
         </div>
-        <button id="showDataBtn" onclick="showData()">Show Data</button>
-        <div id="Data" class="hidden overflow-y-scroll"></div>
+        <div class="flex flex-col justify-around items-center gap-2">
+          <button
+            class="p-2 bg-Green2 w-fit rounded-lg text-white hover:border hover:bg-Green1 hover:text-black"
+            id="showDataBtn"
+            onclick="showData()"
+          >
+            Show Data
+          </button>
+          <div
+            id="Data"
+            class="hidden min-h-fit overflow-y-auto bg-Gray1 p-4 rounded-lg"
+          ></div>
+        </div>
       </div>
-      <div class="flex flex-row h-1/6 w-1/2 justify-between">
+      <div class="flex flex-row h-fit w-1/2 justify-between">
         <img
           src="../Resources/SearchR.png"
           alt="Search Symbol"
-          class="rotate-90"
+          class="rotate-90 h-10"
         />
-        <img src="../Resources/SearchR.png" alt="Search Symbol" />
+        <img src="../Resources/SearchR.png" alt="Search Symbol" class="h-10" />
       </div>
       <div
         id="Notification"

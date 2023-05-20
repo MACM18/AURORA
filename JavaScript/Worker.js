@@ -25,9 +25,8 @@ function Submit() {
     body: formdata,
   };
 
-  fetch("../PHP/SetWorker.php", requestOptions)
+  fetch("../PHP/SetWorker.php?Type=Insert", requestOptions)
     .then((response) => response.json())
-    // .then((result) => console.log(result))
     .then((result) => Notification(result))
     .catch((error) => console.log("error", error));
 }

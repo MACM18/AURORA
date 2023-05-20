@@ -7,10 +7,15 @@
     <title>Worker</title>
     <link rel="stylesheet" href="../CSS/style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
     <script src="../JavaScript/Check.js"></script>
     <script src="../JavaScript/LogOut.js"></script>
+    <script src="../JavaScript/Admin.js"></script>
   </head>
-  <body class="w-screen h-screen flex flex-col justify-between">
+  <body class="w-full h-fit flex flex-col justify-between">
     <header
       class="bg-Green1 w-full h-1/5 flex flex-row justify-center items-end p-4 gap-4"
     >
@@ -30,18 +35,38 @@
         </div>
       </nav>
     </header>
-    <div class="h-3/5 flex flex-col justify-evenly items-center">
+    <div class="h-3/5 w-full flex flex-col justify-evenly items-center">
       <div class="font-semibold text-2xl">You Are An Administrator</div>
-      <div class="flex flex-row">
+      <div class="flex w-full flex-row justify-center">
         <div class="flex flex-col gap-10 bg-Green1 p-4 rounded-lg items-center">
           <div class="p-2 bg-Gray1 rounded-lg">Today Target</div>
-          <div>Graph</div>
-          <div>Legends</div>
+          <div>
+            <input
+              type="date"
+              name="date"
+              id="date"
+              onchange="fetchItemDetails()"
+            />
+          </div>
+          <div id="qualityGraph" class="w-96 h-auto"></div>
+          <div
+            id="GraphAlt"
+            class="text-lg font-extrabold font-serif hidden"
+          ></div>
         </div>
         <div class="flex flex-col gap-10 bg-Green3 p-4 rounded-lg items-center">
           <div class="p-2 bg-Gray1 rounded-lg">Status of Order</div>
-          <div>Graph</div>
-          <div>Legends</div>
+          <div class="flex flex-row gap-2 justify-between">
+            <input type="number" name="orderId" id="orderId" class="w-full" />
+            <button
+              class="p-2 bg-Green2 rounded-lg text-white hover:border hover:bg-Green1 hover:text-black"
+              onclick="fetchOrder()"
+            >
+              Select
+            </button>
+          </div>
+          <div id="orderGraph" class="w-96 h-auto">Graph</div>
+          <div id="GraphAlt2"></div>
         </div>
       </div>
       <div class="flex flex-row h-1/6 w-1/2 justify-between">
